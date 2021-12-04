@@ -13,7 +13,8 @@ git clone https://github.com/MilindaKN23/BD2_114_214_233_282.git
 git clone git@github.com:MilindaKN23/BD2_114_214_233_282.git
 ``` 
 
-
 2. Get into the directory and configure **config.json** as per your requirements
+
+3. Run the main.py file
 
 
