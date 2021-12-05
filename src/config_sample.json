@@ -9,6 +9,6 @@
     "datanode_log_path": "/home/$USER/DATANODE/DATANODE_LOGS/",
     "namenode_log_path": "/home/$USER/NAMENODE/NAMENODE_LOG.txt",
     "namenode_checkpoints": "/home/$USER/NAMENODE/CHECKPOINTS/",
-    "fs_path": "/home/$USER/DFS/FILE_SYSTEM/",
+    "fs_path": "Users/milindakn/DFS/FILE_SYSTEM/",
     "dfs_setup_config": "/home/$USER/DFS/setup.json"
 }

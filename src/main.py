@@ -5,14 +5,23 @@ import json
 # Setup class
 # Read input file path of congiuration file
 # Setup HDFS and creat dfs_setup_config file
+
 class Setup():
     def __init__(self, file_path):
         self.file_path = file_path
- 
+    
+
     def read_config(self):
+        
+        path = "/Users/milindakn/BD2_114_214_233_282/src"
         with open(self.file_path, "r") as jsonfile:
             data = json.load(jsonfile)
-        f = open('dfs_setup_config',"w")
+        str_1 = data["fs_path"]
+        path_1 = path+str_1
+        os.mkdir(str_1)
+        f = open('/dfs_setup_config',"w")
+
+        
         for key in data:
             f.write(key+" : "+str(data[key])+"\n")
         print('Setup Complete')
