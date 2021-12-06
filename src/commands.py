@@ -31,9 +31,7 @@ def put(obj,input_file):
             if obj.datanode_dict[node]>= obj.block_size:
                 print('enterd if')
                 print(node)
-                # fs.split(file=input_file,split_size=obj.block_size,output_dir=node,callback=split_cb)
-                note = "split -b 64 %s %s."
-                os.system(note)
+                #fs.split(file=input_file,split_size=obj.block_size,output_dir=node,callback=split_cb)
                 print('spkit done')
                 print(node)
                 obj.datanode_dict[node]-=obj.block_size

@@ -1,0 +1,14 @@
+{
+    "block_size": 5,
+    "path_to_datanodes": "/Data/Pihoo/DATANODE/",
+    "path_to_namenodes": "/Data/Pihoo/NAMENODE/",
+    "replication_factor": 3,
+    "num_datanodes": 3,
+    "datanode_size": 10,
+    "sync_period": 180,
+    "datanode_log_path": "/Data/Pihoo/DATANODE/DATANODE_LOGS/",
+    "namenode_log_path": "/Data/Pihoo/NAMENODE/NAMENODE_LOG.txt",
+    "namenode_checkpoints": "/Data/Pihoo/NAMENODE/CHECKPOINTS/",
+    "fs_path": "/Data/Pihoo/DFS/FILE_SYSTEM/",
+    "dfs_setup_config": "/Data/Pihoo/DFS/setup.json"
+}
