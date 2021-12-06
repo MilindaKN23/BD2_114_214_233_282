@@ -1,13 +1,14 @@
 import sys
 import os
 import json
+from typing import Sized
 import main 
 from fsplit.filesplit import Filesplit
 
 def split_cb(f, s):
     print("file: {0}, size: {1}".format(f, s))
     
-def cat(obj,input_file):
+def put(obj,input_file):
     #obj.blocksize
     #obj.num_datanodes
     #using hashing algorithm split input file based on blocksize and store each split inside hased datanode
@@ -16,6 +17,7 @@ def cat(obj,input_file):
     # print(data)
     fs = Filesplit()
     input_file_size = os.path.getsize(input_file)
+    
     hashed_datanode = input_file_size % 2
     for i in range(1,obj.num_datanodes+1):
        d=str(i)
