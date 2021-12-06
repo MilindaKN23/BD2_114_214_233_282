@@ -57,14 +57,14 @@ if __name__ == '__main__':
             #cat function
             #arg should be input file
             print("In cat block")
-            input_file = initial_input.split(" ")[2]
+            input_file = initial_input.split(" ")[1]
             commands.cat(setup_obj,input_file)
             print("outside cat")
         elif(command_input == 'ls'):
             curr_dir = os.getcwd()
             commands.ls(curr_dir)
         elif(command_input == 'put'):
-            #put function
+            commands.put(setup_obj,initial_input.split(" ")[1])
             print("In put block")
         elif(command_input == 'mkdir'):
             curr_dir = os.getcwd()
