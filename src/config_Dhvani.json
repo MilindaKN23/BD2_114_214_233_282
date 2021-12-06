@@ -1,0 +1,14 @@
+{
+    "block_size": 64,
+    "path_to_datanodes": "/Data/Dhvani/DATANODE/",
+    "path_to_namenodes": "/Data/Dhvani/NAMENODE/",
+    "replication_factor": 3,
+    "num_datanodes": 3,
+    "datanode_size": 10,
+    "sync_period": 180,
+    "datanode_log_path": "/Data/Dhvani/DATANODE/DATANODE_LOGS/",
+    "namenode_log_path": "/Data/Dhvani/NAMENODE/NAMENODE_LOG.txt",
+    "namenode_checkpoints": "/Data/Dhvani/NAMENODE/CHECKPOINTS/",
+    "fs_path": "/Data/Dhvani/DFS/FILE_SYSTEM/",
+    "dfs_setup_config": "/Data/Dhvani/DFS/setup.json"
+}

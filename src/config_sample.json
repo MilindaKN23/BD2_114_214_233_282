@@ -1,10 +1,10 @@
 {
-    "block_size": 64,
+    "block_size": 8,
     "path_to_datanodes": "/Data/milindakn/DATANODE/",
     "path_to_namenodes": "/Data/milindakn/NAMENODE/",
     "replication_factor": 3,
-    "num_datanodes": 5,
-    "datanode_size": 10,
+    "num_datanodes": 4,
+    "datanode_size": 4,
     "sync_period": 180,
     "datanode_log_path": "/Data/milindakn/DATANODE/DATANODE_LOGS/",
     "namenode_log_path": "/Data/milindakn/NAMENODE/NAMENODE_LOG.txt",

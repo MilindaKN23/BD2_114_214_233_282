@@ -37,5 +37,35 @@ if __name__ == '__main__':
         print("Setting up using "+ file_input +" Configuration File")
     yah_obj = YAH(file_input)
     config_dict = yah_obj.read_config()
-    setup.Setup(config_dict)
 
+    #Initializing setup object and creating directory.
+    setup_obj = setup.Setup(config_dict)
+    setup_obj.create_direc()
+
+    print("Entering command line interface: ")
+
+    while(True):
+        initial_input = input("$$$ ")
+        if(initial_input == 'cat'):
+            #cat function
+            print("In cat block")
+        elif(initial_input == 'ls'):
+            #ls function
+            print("In ls block")
+        elif(initial_input == 'put'):
+            #put function
+            print("In put block")
+        elif(initial_input == 'mkdir'):
+            #ls function
+            print("In mkdir block")
+        elif(initial_input == 'rm'):
+            #ls function
+            print("In rm block")
+        elif(initial_input == 'rmdir'):
+            #ls function
+            print("In rmdir block")
+        elif(initial_input == 'exit'):
+            break
+        else:
+            print("command not found.")
+        
