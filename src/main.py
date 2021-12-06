@@ -1,6 +1,7 @@
 import sys
 import os
 import json
+import commands
 import setup
 
 # Setup class
@@ -40,32 +41,42 @@ if __name__ == '__main__':
 
     #Initializing setup object and creating directory.
     setup_obj = setup.Setup(config_dict)
-    setup_obj.create_direc()
+    try:
+        setup_obj.create_direc()
+    except FileExistsError:
+        print("User already exits")
+        os.chdir(setup_obj.fs_path.split("/")[1]+"/"+setup_obj.fs_path.split("/")[2])
 
     print("Entering command line interface: ")
 
     while(True):
-        initial_input = input("$$$ ")
-        if(initial_input == 'cat'):
+        current_path = os.getcwd()
+        initial_input = input(current_path+" $$$ ")
+        command_input = initial_input.split(" ")[0]
+        if(command_input == 'cat'):
             #cat function
+            #arg should be input file
             print("In cat block")
-        elif(initial_input == 'ls'):
+            input_file = initial_input.split(" ")[2]
+            commands.cat(setup_obj,input_file)
+            print("outside cat")
+        elif(command_input == 'ls'):
             #ls function
             print("In ls block")
-        elif(initial_input == 'put'):
+        elif(command_input == 'put'):
             #put function
             print("In put block")
-        elif(initial_input == 'mkdir'):
+        elif(command_input == 'mkdir'):
             #ls function
             print("In mkdir block")
-        elif(initial_input == 'rm'):
+        elif(command_input == 'rm'):
             #ls function
             print("In rm block")
-        elif(initial_input == 'rmdir'):
+        elif(command_input == 'rmdir'):
             #ls function
             print("In rmdir block")
-        elif(initial_input == 'exit'):
-            break
+        elif(command_input == 'exit'):
+            exit()
         else:
             print("command not found.")
         
