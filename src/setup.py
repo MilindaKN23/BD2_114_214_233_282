@@ -37,6 +37,9 @@ class Setup():
             namenode_dir = self.path_to_namenodes.split("/")[3]
             os.mkdir(home_dir+"/"+user+"/"+namenode_dir)
 
+            secondary_dir = "secondarynode"
+            os.mkdir(home_dir+"/"+user+"/"+secondary_dir)
+
             #creating datanodes within the datanode directory
             create_datanodes(self,self.num_datanodes,self.datanode_size,user,datanode_dir,home_dir,self.datanode_dict,self.datanodename_list)
             print("Succesfully Created Datanodes")
@@ -44,6 +47,10 @@ class Setup():
             #creating namenode within the namenode directory
             create_namenode(namenode_dir)
             print("Succesfully Created Namenode")
+            print(os.getcwd())
+
+            create_secondarynode(secondary_dir,self.fs_path.split("/")[2])
+            print("Successfully Created Secondarynode")
 
             #Success
             print('Setup Complete')
@@ -74,6 +81,21 @@ def create_namenode(namenode_dir):
     with open("namenode.json", "w") as outfile:
         outfile.write(json_object)
     os.chdir("../")
+
+
+
+
+
+def create_secondarynode(secondary_dir,user):
+    os.chdir("/Users/milindakn/BD2_114_214_233_282/src/Data/"+user+"/"+secondary_dir)
+    namenode_dict = {
+        "key":"value"
+    }
+    json_object = json.dumps(namenode_dict)
+    with open("namenode.json", "w") as outfile:
+        outfile.write(json_object)
+    os.chdir("../")
+
 
 def setup_cat():
     print("In setup_cat")
